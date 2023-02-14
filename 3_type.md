@@ -1,35 +1,35 @@
 # 문자형 String Type
 
-console.log("This is 'string'.");
-console.log('This is "string".');
-console.log('This is 'string'.'); // error
-console.log("This is "string".""); // error
-console.log('This is \'string\'.');
+`console.log("This is 'string'.");`
+`console.log('This is "string".');`
+`console.log('This is 'string'.');` // error
+`console.log("This is "string"."");` // error
+`console.log('This is \'string\'.');`
 (한 종류의 따옴표만 사용하고싶다면, string으로 표시하는게 아닌 부분을 \' \' 역슬래시를 먼저 써주면 됨)
 
 ## escape 문자
 
-- \' \' : 한 종류의 따옴표만 사용하고 싶을 때, 문자형이 아닌, 문자를 감쌀 때
-- \n : 개행
-- \t : tab
-- \\ : 역슬래시 자체를 표현 (\ 하나만 출력됨)
+- `\' \'` : 한 종류의 따옴표만 사용하고 싶을 때, 문자형이 아닌, 문자를 감쌀 때
+- `\n` : 개행
+- `\t` : tab
+- `\\` : 역슬래시 자체를 표현 (\ 하나만 출력됨)
 
 ## 문자열에 적용할 수 있는 처리
 
 1. 문자열 연결 연산 (두 문자열을 연결해 새로운 문자열을 만드는 것)
 
 - 문자열 + 문자열
-  '안녕' + '하세요' => '안녕하세요'
+  `'안녕' + '하세요' => '안녕하세요'`
 
 2. 문자 선택 연산자
 
 - 문자열[인덱스] => 문자 하나를 추출해주는 연산 (인덱스는 0부터 시작)
-  '안녕하세요'[0] => '안'
+  `'안녕하세요'[0] => '안'`
 
 3. 문자열의 길이를 구하는 방법
 
 - 문자열.length => 문자 개수 (.length = 속성)
-  '안녕하세요'.length => 5
+  `'안녕하세요'.length => 5`
 
 <!-- ----------------------------------------------------------------------- -->
 
