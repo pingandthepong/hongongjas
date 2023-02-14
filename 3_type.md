@@ -1,11 +1,15 @@
 # 문자형 String Type
 
-- `console.log("This is 'string'.");`
-- `console.log('This is "string".');`
-- `console.log('This is 'string'.');` // error
-- `console.log("This is "string"."");` // error
-- `console.log('This is \'string\'.');`  
-  (한 종류의 따옴표만 사용하고싶다면, string으로 표시하는게 아닌 부분을 \' \' 역슬래시를 먼저 써주면 됨)
+```javaScript
+console.log("This is 'string'.");
+console.log('This is "string".');
+
+// console.log('This is 'string'.'); (error)
+// console.log("This is "string".""); (error)
+
+console.log('This is \'string\'.');
+// (한 종류의 따옴표만 사용하고싶다면, string으로 표시하는게 아닌 부분을 \' \' 역슬래시를 먼저 써주면 됨)
+```
 
 ## escape 문자
 
@@ -44,7 +48,7 @@
 ## 불 만들기
 
 1. `true`, `false`를 그대로 입력하는 방법
-2. 비교 연산자 사용 (`===`, `!==`, `>`, `>=`, `<`, `<=`)
+2. 비교 연산자를 사용하는 방법 (`===`, `!==`, `>`, `>=`, `<`, `<=`)
 
 ## 불 사용 예시
 
@@ -132,8 +136,8 @@
 
 #### 논리연산 사용처 (부등식과 비교 연산자)
 
-- 비교 연산자가 오른쪽으로만 입을 벌리게 하는 방식
-- 변수를 왼쪽에 쓰는 방식
+1. 비교 연산자가 오른쪽으로만 입을 벌리게 하는 방식
+2. 변수를 왼쪽에 쓰는 방식
 
 (1) 3을 포함하라  
 `x <= 3`
@@ -141,12 +145,13 @@
 (2) -2는 포함 X  
 `-2 < x`
 
-(3) 3이상, 2미만 **(범위 표시 시 중요한 점)**  
+(3) 3이상, 2미만 **(✅ 범위 표시 시 중요한 점)**  
 `-3 <= x && x < 2`
 
-(4)  
-닫힌 범위를 나타낼 때 : `a < x && x < b`
-열린 범위를 나타낼 때 : `x < a || b < x`
+(4)
+
+- 닫힌 범위를 나타낼 때 : `a < x && x < b`
+- 열린 범위를 나타낼 때 : `x < a || b < x`
 
 (5) 현재 월이 겨울인지 구하는 예제 (겨울 = 12, 1, 2월)
 
