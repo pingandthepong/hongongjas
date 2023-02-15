@@ -1,0 +1,34 @@
+<script>
+  // 날짜와 시간 구하기
+
+  const date = new Date(); // 객체
+
+  // date에 .을 찍으면 뒤에 넣을 수 있는 것들이 나온다.
+  const currentYear = date.getFullYear();
+  const months = date.getMonth() + 1;
+  const getDate = date.getDate();
+  const days = date.getDay();
+
+  const hours = date.getHours();
+  const minutes = date.getMinutes();
+
+  if (hours < 12) {
+    alert(`
+    오늘은 ${currentYear}년 ${months}월 ${getDate}일 ${days}요일이며,
+    현재 시간은 ${hours}시 ${minutes}분으로 "오전"입니다.`);
+  } else {
+    alert(`
+    오늘은 ${currentYear}년 ${months}월 ${getDate}일 ${days}요일이며,
+    현재 시간은 ${hours}시 ${minutes}분으로 "오후"입니다.`);
+  }
+
+  if (months < 3 || months <= 12) {
+    alert(`지금은 ${months}월로, "겨울"입니다.`);
+  } else if (3 <= month && months < 6) {
+    alert(`지금은 ${months}월로 "봄"입니다.`);
+  } else if (6 <= months && months < 9) {
+    alert(`지금은 ${months}월로 "여름"입니다.`);
+  } else if (9 <= months && months < 12) {
+    alert(`지금은 ${months}월로 "가을"입니다.`);
+  }
+</script>
