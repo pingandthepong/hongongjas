@@ -1,0 +1,55 @@
+<script>
+  // 태어난 연도를 입력받아 띠 출력하기
+  // 연도를 12로 나눈 나머지가 0,1,2,3,4,5,6,7,8,9,10,11일 때
+  // 띠동물은 원숭이, 닭, 개, 돼지, 쥐, 소, 호랑이, 토끼, 용, 뱀, 말, 양
+
+  // 1. 입력
+  const birthYear = Number(prompt("태어난 해를 입력해주세요."));
+  const e = birthYear % 12;
+
+  let result;
+  switch (e) {
+    case 0:
+      alert("원숭이띠 입니다.");
+      break;
+    case 1:
+      alert("닭띠 입니다.");
+      break;
+    case 2:
+      alert("개띠 입니다.");
+      break;
+    case 3:
+      alert("돼지띠 입니다.");
+      break;
+    case 4:
+      alert("쥐띠 입니다.");
+      break;
+    case 5:
+      alert("소띠 입니다.");
+      break;
+    case 6:
+      alert("호랑이띠 입니다.");
+      break;
+    case 7:
+      alert("토끼띠 입니다.");
+      break;
+    case 8:
+      alert("용띠 입니다.");
+      break;
+    case 9:
+      alert("뱀띠 입니다.");
+      break;
+    case 10:
+      alert("말띠 입니다.");
+      break;
+    case 11:
+      alert("양띠 입니다.");
+      break;
+    default:
+      alert("정확한 값을 입력해주세요.");
+  }
+
+  // 2. 처리
+
+  // 3. 출력
+</script>
