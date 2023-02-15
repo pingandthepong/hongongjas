@@ -45,3 +45,29 @@ a++;
 console.log(a); // 3
 
 ```
+
+---
+
+### 선증감
+
+> `a++`, `a--`
+
+- 현재 문장을 실행한 후에 더하거나, 빼라
+
+```JS
+let a = 0;
+console.log(a++); // console.log(a) (0 출력됨) => a += 1;
+console.log(a); // a = 1;
+```
+
+### 후증감
+
+> `++a`, `--a`
+
+- 현재 문장을 실행하기 전에 더하거나, 빼라
+
+```JS
+let b = 0;
+console.log(++b); // b += 1;  => console.log(b);
+console.log(b); // b = 1;
+```
