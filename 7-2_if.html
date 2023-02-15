@@ -12,6 +12,7 @@
   const hours = date.getHours();
   const minutes = date.getMinutes();
 
+  // 불 표현식 비교를 최소화하면 조건 비교와 관련된 성능이 개선된다.
   if (hours < 12) {
     alert(`
     오늘은 ${currentYear}년 ${months}월 ${getDate}일 ${days}요일이며,
@@ -24,11 +25,22 @@
 
   if (months < 3 || months <= 12) {
     alert(`지금은 ${months}월로, "겨울"입니다.`);
-  } else if (3 <= month && months < 6) {
+  } else if (months < 6) {
     alert(`지금은 ${months}월로 "봄"입니다.`);
-  } else if (6 <= months && months < 9) {
+  } else if (months < 9) {
     alert(`지금은 ${months}월로 "여름"입니다.`);
-  } else if (9 <= months && months < 12) {
+  } else if (months < 12) {
     alert(`지금은 ${months}월로 "가을"입니다.`);
+  }
+
+  // 아침 점심 저녁 구분
+  if (hours < 10) {
+    alert(`아침밥 먹을 시간입니다.`);
+  } else if (hours < 16) {
+    alert(`점심밥 먹을 시간입니다.`);
+  } else if (hours < 21) {
+    alert(`저녁밥 먹을 시간입니다.`);
+  } else {
+    alert(`${hours}시입니다. 늦었으므로 가능하면 드시지 마세요.`);
   }
 </script>
