@@ -35,7 +35,7 @@
 
 ### 초기화
 
-- 음으로 값을 할당하는 것
+- 처음으로 값을 할당하는 것
 
 ### 선언/정의
 
@@ -51,12 +51,12 @@
 
 > let a = 10
 
-- a => left value => lvalue(넣는 놈)
-- 10 => right value => rvalue(꺼내는 놈, 값)
+- `a` => left value => lvalue(넣는 놈)
+- `10` => right value => rvalue(꺼내는 놈, 값)
 
 > let b = a
 
-- b : 넣는 놈
-- a : 꺼내는 놈
+- `b` : 넣는 놈
+- `a` : 꺼내는 놈
 
 ---
