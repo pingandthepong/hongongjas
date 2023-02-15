@@ -1,0 +1,13 @@
+<script>
+  // 현재 환율을 기반으로 사용자에게 숫자를 입력받아 달러(USD)에서 원화(KRW)로 환율을 변환하는 프로그램
+  // 집필 시점 환율 1달러 = 1207원
+
+  // 1. 입력 : 숫자를 입력 받는다.
+  const input = Number(prompt("달러 단위의 금액을 입력해주세요.", ""));
+
+  // 2. 처리
+  const output = input * 1207;
+
+  // 3. 출력
+  alert(`${input}(USD) = ${output}(KRW)입니다.`);
+</script>
