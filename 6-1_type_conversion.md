@@ -41,12 +41,12 @@ b; // true 혹은 false가 return 됨
 
 #### 불 => 문자열로 형변환
 
-> String(true) => "true"
+> String(true) => "true"  
 > String(false) => "false"
 
 #### 불 => 숫자열로 형변환
 
-> Number(true) => 1
+> Number(true) => 1  
 > Number(false) => 0
 
 #### 다른 자료형 => 불로 형변환 (암기⭐️)
