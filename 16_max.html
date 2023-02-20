@@ -21,6 +21,20 @@
       };
 
       console.log(max([1, 2, 3, 4, 5]));
+
+      // 매개변수로 숫자를 받는 max2() 함수
+      const max2 = function (...array) {
+        let output = array[0];
+
+        for (const value of array) {
+          if (output < value) {
+            output = value;
+          }
+        }
+        return output;
+      };
+
+      console.log(max2(6, 7, 8, 9, 10));
     </script>
   </head>
   <body></body>
