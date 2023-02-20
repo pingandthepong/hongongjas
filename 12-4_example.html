@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>diamond</title>
+    <script>
+      let output = "";
+      const size = 5;
+
+      for (let i = 0; i < 4; i++) {
+        for (let k = 0; k < 4 - i; k++) {
+          output += " ";
+        }
+        for (let j = 0; j < 2 * i + 1; j++) {
+          output += "*";
+        }
+        output += "\n";
+      }
+
+      for (let i = 0; i < 5; i++) {
+        for (let k = 0; k < i; k++) {
+          output += " ";
+        }
+        for (let j = 0; j < 2 * (4 - i) + 1; j++) {
+          output += "*";
+        }
+        output += "\n";
+      }
+      console.log(output);
+
+      // 별 5 x 5 찍기
+      for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 5; j++) {
+          output += "*";
+        }
+        output += "\n";
+      }
+
+      console.log(output);
+
+      // 직각삼각형 만들기
+      for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < i + 1; j++) {
+          output += "*";
+        }
+        output += "\n";
+      }
+
+      console.log(output);
+
+      // 역 직각삼각형 만들기
+      for (let i = 0; i < 5; i++) {
+        for (let j = 0; j < 5 - i; j++) {
+          output += "*";
+        }
+        output += "\n";
+      }
+
+      console.log(output);
+
+      // 피라미드 만들기
+      for (let i = 0; i < 10; i++) {
+        for (let k = 0; k < 9 - i; k++) {
+          output += " ";
+        }
+        for (let j = 0; j < 2 * i + 1; j++) {
+          output += "*";
+        }
+        output += "\n";
+      }
+
+      console.log(output);
+
+      // 다이아몬드 만들기
+      for (let i = 0; i < 5; i++) {
+        for (let k = 0; k < 5 - i; k++) {
+          output += " ";
+        }
+        for (let j = 0; j < 2 * i + 1; j++) {
+          output += "*";
+        }
+        output += "\n";
+      }
+      for (let i = 0; i < 6; i++) {
+        for (let k = 0; k < i; k++) {
+          output += " ";
+        }
+        for (let j = 0; j < 2 * (5 - i) + 1; j++) {
+          output += "*";
+        }
+        output += "\n";
+      }
+
+      console.log(output);
+
+      // 모래시계 만들기
+      for (let i = 0; i < 5; i++) {
+        for (let k = 0; k < i; k++) {
+          output += " ";
+        }
+        for (let j = 0; j < 2 * (4 - i) + 1; j++) {
+          output += "*";
+        }
+        output += "\n";
+      }
+      for (let i = 0; i < 5; i++) {
+        for (let k = 0; k < 4 - i; k++) {
+          output += " ";
+        }
+        for (let j = 0; j < 2 * i + 1; j++) {
+          output += "*";
+        }
+        output += "\n";
+      }
+
+      console.log(output);
+    </script>
+  </head>
+  <body></body>
+</html>
