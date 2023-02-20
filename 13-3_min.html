@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>최솟값 구하는 함수 만들기</title>
+    <script>
+      const min = function (array) {
+        // 최솟값이 맞는지 아닌지 확인할 변수
+        let output = array[0];
+        console.log(`output 초기값 = ${output}`);
+
+        for (const value of array) {
+          console.log(`현재 비교 대상 ${output}와 ${value} 중 작은 것은?`);
+          if (output > value) {
+            output = value;
+          }
+          console.log(`= ${output}`);
+        }
+
+        return output;
+      };
+
+      console.log(`${min([52, 273, 32, 103, 275, 24, 57])}`);
+    </script>
+  </head>
+  <body></body>
+</html>
