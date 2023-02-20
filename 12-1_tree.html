@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>별로 트리 만들기</title>
+
+    <script>
+      // 별로 트리 만들기
+      let output = "";
+
+      for (let i = 0; i < 9; i++) {
+        for (let k = 0; k < 8 - i; k++) {
+          output += " ";
+        }
+        for (let j = 0; j < 2 * i + 1; j++) {
+          output += "*";
+        }
+        output += "\n";
+      }
+      console.log(output);
+    </script>
+  </head>
+  <body></body>
+</html>
