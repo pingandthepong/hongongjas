@@ -29,6 +29,13 @@
       console.log(max(1, 2, 3, 4, 5));
 
       // 2. 구 버전 자바스크립트에서 전개 연산자 구현하기
+      // 전개연산자는 함수 호출 시 ...을 이용해 배열을 분해해 전달하는 역할을 하지만, 최신 자바스크립트에서 지원하기에 구버전에서는 사용 불가능
+
+      const input = [1, 2, 3, 4];
+      console.log(max(...input)); //  = max(1,2,3,4)
+      console.log(max.apply(null, input)); // = max(1,2,3,4)
+
+      // max.apply()는 현대에도 많이 보이는 코드. 기억해두기.
     </script>
   </head>
   <body></body>
