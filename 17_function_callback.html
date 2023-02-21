@@ -26,9 +26,9 @@
       test(f); // 안녕하세요
 
       // ⭐️ 콜백함수에 매개변수 넣기
-      const test2 = function (callback) {
-        for (let i = 0; i < 5; i++) {
-          callback(i);
+      const test2 = function (array, callback) {
+        for (const value of array) {
+          callback(value);
         }
       };
 
@@ -36,7 +36,7 @@
         console.log(`${콜백함수의_매개변수}번째 안녕하세요!`);
       };
 
-      test2(f2);
+      test2([52, 273, 103, 32], f2);
     </script>
   </head>
   <body></body>
