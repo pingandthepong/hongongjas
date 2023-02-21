@@ -14,26 +14,31 @@
 
       // ⭐️forEach 메서드를 사용해 배열을 순회하려면 콜백 함수 또는 익명 함수 필요⭐️
 
-      const 배열 = [273, 52, 103, 32, 57];
+      let 배열 = [273, 52, 103, 32, 57];
 
       배열.forEach(function (value, index) {
         console.log(value, index);
         console.log(`${index}번째 값은 ${value}입니다.`);
       });
 
+      // ---------------------------------------------
       // .filter() 함수 : 매개변수를 forEach와 똑같이 받음
       // 콜백함수로 true/false를 리턴하는 함수가 올 것을 예상함
 
-      console.log(
-        배열.filter(function (value, index) {
-          return true;
-        })
-      );
-      console.log(
-        배열.filter(function (value, index) {
-          return false;
-        })
-      );
+      let 배열2 = [273, 52, 103, 32, 57];
+      배열2 = 배열2.filter(function (value, index) {
+        return value % 2 === 0; // value를 기반으로 짝수만 잡겠다
+      });
+      console.log(`짝수만 출력 : ${배열2}`);
+
+      let 배열3 = [273, 52, 103, 32, 57];
+      배열3 = 배열3.filter(function (value, index) {
+        return value % 2 !== 0;
+      });
+      console.log(`홀수만 출력 : ${배열3}`);
+
+      // ---------------------------------------------
+      // .map() 함수 : 매개변수를 forEach와 똑같이 받음
     </script>
   </head>
   <body></body>
