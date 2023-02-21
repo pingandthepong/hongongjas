@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수 고급 - 콜백 함수</title>
+    <script>
+      // 자바스크립트에서 함수는 하나의 값이기 때문에 함수의 매개변수로 '함수를' 전달 가능
+      // 매개변수로 들어오는 함수 = 콜백함수
+
+      const test = function (a) {
+        // console.log(a);
+        a(); // 매개변수로 함수가 들어올 것이라고 확신하기 때문에 이렇게 사용 가능
+      };
+
+      // 아래 함수호출은 오류가 난다. "a is not a function"
+      // test(10);
+      // test("안녕");
+      // test(true);
+
+      const f = function () {
+        console.log("안녕하세요");
+      };
+
+      test(f);
+    </script>
+  </head>
+  <body></body>
+</html>
