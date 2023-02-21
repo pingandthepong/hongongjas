@@ -26,25 +26,32 @@
       // 콜백함수로 true/false를 리턴하는 함수가 올 것을 예상함
 
       let 배열2 = [273, 52, 103, 32, 57];
-      배열2 = 배열2.filter(function (value, index) {
-        return value % 2 === 0; // value를 기반으로 짝수만 잡겠다
-      });
+      // 배열2 = 배열2.filter(function (value, index) {
+      //   return value % 2 === 0; // value를 기반으로 짝수만 잡겠다
+      // });
+
+      배열2 = 배열2.filter((value, index) => value % 2 === 0);
       console.log(`짝수만 출력 : ${배열2}`);
 
       let 배열3 = [273, 52, 103, 32, 57];
-      배열3 = 배열3.filter(function (value, index) {
-        return value % 2 !== 0;
-      });
+      // 배열3 = 배열3.filter(function (value, index) {
+      //   return value % 2 !== 0;
+      // });
+      배열3 = 배열3.filter((value, index) => value % 2 !== 0);
       console.log(`홀수만 출력 : ${배열3}`);
 
       // ---------------------------------------------
       // .map() 함수 : 기존의 배열 요소를 기반으로 새로운 배열 요소를 만들어 리턴하는 함수
 
-      배열 = 배열.map(function (value, index) {
-        return value + "!!";
-      });
+      // 배열 = 배열.map(function (value, index) {
+      //   return value + "!!";
+      // });
+      배열 = 배열.map((value, index) => value + "!!");
 
       console.log(배열);
+
+      // ---------------------------------------------
+      // 화살표 함수 : (매개변수) => { 본문(리턴할 코드가 한 줄이면 return과 대괄호도 생략 가능 }
     </script>
   </head>
   <body></body>
