@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배열의 콜백함수를 사용하는 메서드</title>
+    <script>
+      // 자바스크립트에서 콜백함수를 사용하는 예제
+      // 배열 메서드 중 콜백함수를 받는 메서드가 많음 (대표적으로 .forEach())
+
+      // .forEach(value, index, array) 는 배열의 요소를 콜백함수에 전달해서 반복
+      // (여기서만 그런가, forEach가 그런가? -- 여기서 그런 예제를 사용한 것 같음)
+
+      const 배열 = [273, 52, 103, 32, 57];
+
+      배열.forEach(function (value, index) {
+        console.log(value, index);
+        console.log(`${index}번째 값은 ${value}입니다.`);
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
