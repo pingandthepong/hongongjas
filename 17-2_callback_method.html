@@ -38,7 +38,13 @@
       console.log(`홀수만 출력 : ${배열3}`);
 
       // ---------------------------------------------
-      // .map() 함수 : 매개변수를 forEach와 똑같이 받음
+      // .map() 함수 : 기존의 배열 요소를 기반으로 새로운 배열 요소를 만들어 리턴하는 함수
+
+      배열 = 배열.map(function (value, index) {
+        return value + "!!";
+      });
+
+      console.log(배열);
     </script>
   </head>
   <body></body>
