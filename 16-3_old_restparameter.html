@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>구버전 대응하기</title>
+    <script>
+      // 대부분의 프로그래밍 언어가 함수의 헤더(함수의 이름, 매개변수로 뭘 넣어야하는지)만 봐도 어떻게 사용할 수 있는지 알아야 한다는 암묵적 룰이 있음.
+      // 지금은 가변 매개변수 함수를 만들 수 있는 문법이 나왔으므로 arguments를 사용하는 것은 위험한 형태이므로 ✅사용하지 않는 것을 추천
+
+      // 1. 구 버전 자바스크립트에서 가변 매개변수 함수 구현하기
+      // 매개변수를 입력하지 않고, 함수 내부에서만 사용 가능한 arguments를 사용
+      // arguments는 우리가 사용하지 않은 것들도 들어가서, 단순한 for...in 반복문 등 사용 시 문제 발생. ⭐️arguments 사용시 'for문' 사용해야 함.
+
+      const max = function () {
+        console.log(arguments);
+        let output = arguments[0];
+
+        for (let i = 0; i < arguments.length; i++) {
+          const value = arguments[i];
+          if (output < value) {
+            output = value;
+          }
+        }
+        return output;
+      };
+
+      console.log(max(1, 2, 3, 4, 5));
+
+      // 2. 구 버전 자바스크립트에서 전개 연산자 구현하기
+    </script>
+  </head>
+  <body></body>
+</html>
