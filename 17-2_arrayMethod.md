@@ -84,6 +84,52 @@ console.log(returnValues);
 
 ---
 
+### map()
+
+`map((value, index, array) => {})`
+
+> map()은 배열 내의 모든 요소 각각에 대하여 주어진 함수를 호출한 결과를 모아 새로운 배열을 반환하는 메서드
+> map()은 forEach()와 비슷하게 배열의 요소를 반복하는 반복문이지만, return되는 결과에 따라 새로운 배열을 만들어낸다는 점이 다르다(리턴되는 배열이 있느냐 없느냐!).  
+> map()을 통해 생성된 배열은 **_새로운 배열_**이다.
+
+```JS
+const array = [1, 2, 3, 4, 5];
+
+const newMap = array.map(value => value + "!!");
+
+console.log(newMap); // ["1!!","2!!","3!!","4!!","5!!"]
+```
+
+```JS
+const myArr = [1, 2, 3, 4, 5];
+
+const newMyArr = myArr.map((element, index, array) => {
+  return element * 2;
+});
+
+console.log(newMyArr); // [2,4,6,8,10]
+```
+
+- map()을 통해 생성된 배열은 '새로운 배열'이다. (결과값이 같더라도, 다른 배열이다)
+
+```JS
+const arr1 = [1, 2, 3, 4, 5];
+
+const arr2 = arr1;
+
+const arr3 = arr1.map(element => return element);
+
+console.log(arr1); // [1,2,3,4,5]
+console.log(arr2); // [1,2,3,4,5]
+console.log(arr3); // [1,2,3,4,5]
+
+console.log(arr1 === arr2); // true
+console.log(arr1 === arr3); // false
+console.log(arr2 === arr3); // false
+```
+
+---
+
 ### 화살표 함수
 
 `(매개변수) => { 본문(리턴할 코드가 한 줄이면 return과 대괄호도 생략 가능 }`
