@@ -20,6 +20,20 @@
         console.log(value, index);
         console.log(`${index}번째 값은 ${value}입니다.`);
       });
+
+      // .filter() 함수 : 매개변수를 forEach와 똑같이 받음
+      // 콜백함수로 true/false를 리턴하는 함수가 올 것을 예상함
+
+      console.log(
+        배열.filter(function (value, index) {
+          return true;
+        })
+      );
+      console.log(
+        배열.filter(function (value, index) {
+          return false;
+        })
+      );
     </script>
   </head>
   <body></body>
