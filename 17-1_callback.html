@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>함수 고급 - 콜백 함수</title>
+    <script>
+      function checkGang(count, link, good) {
+        count < 3 ? link() : good();
+      }
+
+      // 콜백함수
+      function linkGang() {
+        console.log("깡 보고 와");
+      }
+
+      // 콜백함수
+      function goodGang() {
+        console.log("잘했습니다.");
+      }
+
+      checkGang(2, linkGang, goodGang);
+
+      // ------------------------------
+
+      const test = function (a) {
+        a();
+      };
+
+      // 콜백함수
+      const f = function () {
+        console.log("hi!");
+      };
+
+      test(f);
+
+      // ------------------------------
+
+      const test2 = function (array, a) {
+        for (const value of array) {
+          a(value);
+        }
+      };
+
+      // 콜백함수
+      const f2 = function (param) {
+        console.log(param);
+      };
+
+      test2([1, 2, 3, 4, 5], f2);
+
+      // ------------------------------
+
+      function add(a, b, callback) {
+        callback(a + b);
+      }
+
+      function sayResult(value) {
+        console.log(value);
+      }
+
+      add(3, 4, sayResult);
+
+      // ------------------------------
+    </script>
+  </head>
+  <body></body>
+</html>
