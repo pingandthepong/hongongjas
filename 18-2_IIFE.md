@@ -1,10 +1,9 @@
 # 즉시 호출 함수 (IIFE)
 
-> 함수를 만들고 즉시 호출하는 함수 (개인적으로는 '물고기 모양'으로 기억했다.)  
-> IIFE (Immediately Invoked Function Expression)
+> - 함수를 만들고 즉시 호출하는 함수 (개인적으로는 '물고기 모양'으로 기억했다.)
+> - IIFE (Immediately Invoked Function Expression)
 
-1. `(function(){})()`
-2. `(() => {}){}`
+`(function(){})()` `(() => {})()`
 
 ```JS
 // IIFE 함수는 사실 아래와 동일함
