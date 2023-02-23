@@ -19,3 +19,18 @@ Number.prototype.원 = function () {
 };
 
 console.log(num3.원());
+
+console.log("------------------------------");
+// 함수는 객체 자료형이라 속성을 추가해서 사용 가능하다.
+function printLang(code) {
+  return printLang._lang[code];
+}
+printLang._lang = {
+  ko: "한국어",
+  en: "영어",
+  ja: "일본어",
+  fr: "프랑스어",
+  es: "스페인어",
+};
+console.log(`printLang("ko"):`, printLang("ko"));
+console.log(`printLang("en"):`, printLang("en"));
