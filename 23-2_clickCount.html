@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문서 객체 이벤트 기본2</title>
+    <script>
+      // document.addEventListener("DOMContentLoaded", () => {});
+    </script>
+  </head>
+  <body>
+    <script>
+      let counter = 0;
+      const listener = () => {
+        header.innerText = `클릭 횟수: ${++counter}`;
+      };
+
+      const header = document.createElement("h1");
+      header.style.userSelect = "none";
+      header.innerText = `클릭 횟수: 0`;
+
+      const p = document.createElement("p");
+      p.innerText = `이벤트 연결 상태: 해제`;
+
+      const connectButton = document.createElement("button");
+      connectButton.innerText = `이벤트 연결`;
+      connectButton.addEventListener("click", () => {
+        header.addEventListener("click", listener);
+        p.innerText = "이벤트 연결 상태: 연결";
+      });
+
+      const disconnectButton = document.createElement("button");
+      disconnectButton.innerText = `이벤트 해제`;
+      disconnectButton.addEventListener("click", () => {
+        header.removeEventListener("click", listener);
+        p.innerText = "이벤트 연결 상태: 해제";
+      });
+
+      document.body.appendChild(header);
+      document.body.appendChild(connectButton);
+      document.body.appendChild(disconnectButton);
+      document.body.appendChild(p);
+    </script>
+  </body>
+</html>
