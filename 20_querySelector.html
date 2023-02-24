@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>querySelector</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // 1. 태그 선택자로 읽어들이기
+        const h1 = document.querySelector("h1");
+        h1.style.color = "tomato";
+
+        // 2. 아이디 선택자로 읽어들이기
+        const header = document.querySelector("#header");
+        header.style.backgroundColor = "black";
+        header.style.padding = "10px";
+
+        // 3. 클래스 선택자로 읽어들이기
+        const center = document.querySelector(".center.head");
+        center.style.textAlign = "center";
+        center.style.borderRadius = "10px";
+
+        // 4. 속성 선택자로 읽어들이기
+        const text = document.querySelector("[type = text]");
+        text.style.backgroundColor = "gold";
+        text.style.borderRadius = "10px";
+
+        // 5. 후손 선택자로 읽어들이기
+        const input = document.querySelector("input"); // querySelector()는 첫 번째 만나는 요소에만 적용됨
+        input.style.padding = "10px";
+
+        // 여러 개의 태그를 잡을 시 querySelectorAll()
+        const inputAll = document.querySelectorAll("input");
+
+        for (const el of inputAll) {
+          el.style.backgroundColor = "blue";
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <h1 id="header" class="center head">Hi</h1>
+    <input type="text" />
+    <input />
+  </body>
+</html>

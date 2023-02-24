@@ -6,7 +6,7 @@
 
 ## 문서 객체 조작
 
-### 방법1) `<body>` 마지막 단에서 `<script>document.body.innerHTML = "";</script>`
+### 방법1) `<body>` 마지막 단에서 `document.body.innerHTML = "";`
 
 - 태그 조작을 하기 위해서는, 그 태그가 생성된 이후에 script태그를 놓아서 사용해야 함.
 - 그래서 `<body>`태그 가장 밑 단에서 조작.
@@ -27,3 +27,21 @@
 ## 문서 객체 가져오기
 
 > `document.querySelector()` & `document.querySelectorAll()` method
+
+### `document.querySelector()`
+
+- 선택자로 잡아지는 것 단 하나만 추출해서 조작
+
+### `document.querySelectorAll()`
+
+- 태그를 여러 개 집어서 추출해주기 때문에 for..of 등의 반복문과 함께 사용
+
+```JS
+// input이 두 개 여러 개 있는 상황이라면
+
+const inputAll = document.querySelectorAll('input');
+
+for (const el of inputAll) {
+  el.style.backgroundColor = "blue";
+}
+```
