@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문서 객체 이벤트 기본</title>
+    <script>
+      // 문서 객체에 이벤트 연결 (이벤트 리스터 or 이벤트 핸들러)
+      document.addEventListener("DOMContentLoaded", () => {
+        // on : 사용자에게 반응하는 프로그램을 만들 수 있음
+        // document.on~;
+
+        const header = document.createElement("h1");
+        header.style.userSelect = "none";
+        document.body.appendChild(header);
+
+        let counter = 0;
+        header.innerText = `클릭 횟수 : ${counter}`;
+        // 클릭하면 숫자 증가하게 만들기
+
+        header.addEventListener("click", () => {
+          counter++;
+          header.innerText = `클릭 횟수 : ${counter}`;
+        });
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
