@@ -45,3 +45,52 @@ for (const el of inputAll) {
   el.style.backgroundColor = "blue";
 }
 ```
+
+---
+
+## 문서 객체 조작하기 - 글자
+
+> 조작 = 값 추출 / 값 넣기
+
+> `textContent`  
+> `innerHTML`
+
+```html
+<h1 id="textContent">textContent 속성 기존 문자열</h1>
+<h1 id="innerHTML">innerHTML 속성 기존 문자열</h1>
+```
+
+```JS
+document.addEventListener("DOMContentLoaded", () => {
+  const header1 = document.querySelector("#textContent");
+  const header2 = document.querySelector("#innerHTML");
+})
+```
+
+- 값 추출
+
+```JS
+console.log(header1.textContent);
+console.log(header2.innerHTML);
+```
+
+- 값 넣기
+
+```JS
+header1.textContent = "원하는 값1";
+header2.innerHTML = "원하는 값2";
+```
+
+### textContent
+
+- 태그도 text로 인식
+- 일반적으로 많이 사용
+
+### innerHTML
+
+- 태그를 태그로 인식
+- 보완에 있어서 문제가 있을 수 있기에 많이 사용하지는 않음
+
+---
+
+## 문서 객체 조작하기 - 속성

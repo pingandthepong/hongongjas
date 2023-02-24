@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문서 객체 조작</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const header1 = document.querySelector("#textContent");
+        const header2 = document.querySelector("#innerHTML");
+
+        // 조작한다 = 값 추출 / 값 넣기
+
+        // 값 추출
+        console.log(header1.textContent);
+        console.log(header2.innerHTML);
+
+        // 값 넣기
+        header1.textContent = "원하는<br> 값1"; // <br>을 문자로 출력
+        header2.innerHTML = "원하는<br> 값2"; // <br>을 태그로 인식
+      });
+    </script>
+  </head>
+  <body>
+    <h1 id="textContent">textContent 속성 기존 문자열</h1>
+    <h1 id="innerHTML">innerHTML 속성 기존 문자열</h1>
+  </body>
+</html>
