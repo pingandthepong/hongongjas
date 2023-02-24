@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>문서 객체 조작 - 속성</title>
+    <title>문서 객체 조작 - 속성, 스타일</title>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const img = document.querySelector("img");
@@ -16,10 +16,32 @@
         // 값 추출 .getAttribute("속성명")
         // console.log(img.getAttribute("src"));
         console.log(img.src);
+
+        const divs = document.querySelectorAll("div");
+
+        // div
+        divs.forEach((div, key) => {
+          div.style.backgroundColor = `rgb(${key * 25.5}, ${key * 25.5}, ${
+            key * 25.5
+          })`;
+          div.style.height = "10px";
+          console.log(div.style.height);
+        });
       });
     </script>
   </head>
   <body>
     <img src="" alt="" />
+
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
   </body>
 </html>

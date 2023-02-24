@@ -127,3 +127,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
 - 태그에 추가적인 정보를 전달하고 싶을 때 일시적으로 '사용자 정의 속성(데이터 속성)'을 활용하게 됨
 - 추후에 다루겠음
+
+---
+
+## 문서 객체 조작하기 - 스타일 ()
+
+> .style. =
+
+```html
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+```
+
+```JS
+document.addEventListener("DOMContentLoaded", () => {
+  const divs = document.querySelectorAll("div");
+
+  // querySelectorAll은 for...of 혹은 forEach 등을 활용해 반복
+
+  // div 배경색깔 흰색에서 검은색으로 그라데이션 만들기
+  divs.forEach((div, key) => {
+    div.style.backgroundColor = `rgb(${key * 25.5}, ${key * 25.5}, ${key * 25.5})`;
+  })
+})
+```
