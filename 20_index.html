@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문서 객체 모델 DOM</title>
+    <script>
+      // document(문서 객체)의 body 객체 안의 HTML에 += 을 활용해 문자열을 출력
+      // 아직 <body>태그가 생성되지 않았기에 <body>태그 조작 불가 => error
+      document.body.innerHTML += "<h1>A</h1>";
+    </script>
+  </head>
+  <body>
+    <script>
+      // 태그 조작을 하기 위해서는, 그 태그가 생성된 이후에 script태그를 놓아서 사용해야 함. 그래서 <body>태그 가장 밑 단에서 조작.
+      // BUT! HTML문서를 보면 script태그는 최대한 head태그 안에 넣으라는 말이 있음.
+      // 그래서 head태그 안에서 조작할 수 있게, "문서 객체가 모두 만들어진 다음에 실행해 달라"는 코드인 document.addEventListener("DOMContentLoaded", () => {})
+      // document(문서 객체)의 body 객체 안의 HTML에 += 을 활용해 문자열을 출력
+      document.body.innerHTML += "<h1>B</h1>";
+    </script>
+    <h1>문서 객체 모델</h1>
+    <ul>
+      <li>DOM (Document Object Model)</li>
+    </ul>
+    <script>
+      // document(문서 객체)의 body 객체 안의 HTML에 += 을 활용해 문자열을 출력
+      document.body.innerHTML += "<h1>C</h1>";
+    </script>
+  </body>
+</html>
