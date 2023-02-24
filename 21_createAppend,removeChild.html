@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문서 객체 생성, 제거</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // 문서 객체 생성 : .createElement("") (지정한 tagName의 HTML 요소를 만들어 반환)
+        const header = document.createElement("h1");
+        header.textContent = "createElement로 만든 태그";
+        header.style.color = "red";
+        const body = document.querySelector("body");
+
+        // 요소 붙이기 : .appendChild() (header 노드를 body 노드의 자식 노드 리스트 중 마지막 자식으로 붙임)
+        body.appendChild(header);
+
+        setTimeout(() => {
+          // 문서 객체 제거 .removeChild()
+          // body.removeChild(header);
+          header.parentNode.removeChild(header); // 더 많이 사용
+        }, 2000);
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
