@@ -94,3 +94,36 @@ header2.innerHTML = "원하는 값2";
 ---
 
 ## 문서 객체 조작하기 - 속성
+
+> 조작 = 값 추출 / 값 넣기
+
+- `.setAttribute("속성명", "값");`
+- `.getAttribute("속성명");`
+
+- 표준 속성은 set, get 없이 바로 불러오기 가능
+
+```html
+<img />
+```
+
+```JS
+document.addEventListener("DOMContentLoaded", () => {
+  const img = document.querySelector("img");
+
+  // 값 넣기
+  img.setAttribute("src", "http://placekitten.com/200/200");
+  // 표준 속성은 바로 입력 가능
+  img.src = "http://placekitten.com/200/200"; 가능
+
+
+  // 값 추출
+  console.log(img.getAttribute("src"));
+  // 표준 속성은 바로 입력 가능
+  console.log(img.src);
+})
+```
+
+### 비표준 속성을 왜 조작할까?
+
+- 태그에 추가적인 정보를 전달하고 싶을 때 일시적으로 '사용자 정의 속성(데이터 속성)'을 활용하게 됨
+- 추후에 다루겠음
