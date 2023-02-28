@@ -7,14 +7,68 @@
     <title>07-2 이벤트 활용</title>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        document.addEventListener("keydown", () => {
-          document.body.innerHTML = "<h1>keydown</h1>";
+        document.addEventListener("keydown", (event) => {
+          document.body.innerHTML = `<h1>keydown ${event.code}</h1>`;
         });
-        document.addEventListener("keyup", () => {
-          document.body.innerHTML = "<h1>keyup</h1>";
+        document.addEventListener("keyup", (이벤트객체) => {
+          document.body.innerHTML = `<h1>keyup ${이벤트객체.code}</h1>`;
         });
       });
     </script>
+    <style>
+      table,
+      td {
+        border: 1px solid #333;
+      }
+
+      thead,
+      tfoot {
+        background-color: #333;
+        color: #fff;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>이벤트 속성 이름</th>
+          <th>설명</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>code</td>
+          <td>입력한 키</td>
+        </tr>
+
+        <tr>
+          <td>keyCode</td>
+          <td>입력한 키를 나타내는 숫자</td>
+        </tr>
+        <tr>
+          <td>altKey</td>
+          <td>Alt키를 눌렀는지</td>
+        </tr>
+        <tr>
+          <td>ctrlKey</td>
+          <td>Ctrl키를 눌렀는지</td>
+        </tr>
+        <tr>
+          <td>shiftKey</td>
+          <td>Shift키를 눌렀는지</td>
+        </tr>
+      </tbody>
+    </table>
+    <ul>
+      <li>
+        이벤트 발생 시, 이벤트와 관련된 정보는 콜백함수의 첫 번째 매개변수로
+        가져온다.
+      </li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </body>
 </html>
