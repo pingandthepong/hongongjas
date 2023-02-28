@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>07-2 이벤트 활용</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.addEventListener("keydown", () => {
+          document.body.innerHTML = "<h1>keydown</h1>";
+        });
+        document.addEventListener("keyup", () => {
+          document.body.innerHTML = "<h1>keyup</h1>";
+        });
+      });
+    </script>
+  </head>
+  <body></body>
+</html>
