@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>기본 이벤트 막기</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const a = document.querySelector("a");
+        a.addEventListener("click", (event) => {
+          event.preventDefault();
+        });
+        a.addEventListener("contextmenu", (event) => {
+          event.preventDefault();
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <a href="https://youtu.be/5tBZea8QaoQ">링크</a>
+
+    <ul>
+      <li>1. 아무리 클릭해도 이동하지 않는, click & preventDefault()</li>
+      <li>2. 우클릭을 막는, contextmenu & preventDefault()</li>
+    </ul>
+  </body>
+</html>
