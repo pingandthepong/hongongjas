@@ -13,11 +13,26 @@
         textarea.addEventListener("keyup", () => {
           h1.textContent = `글자 수: ${textarea.value.length}`;
         });
+        textarea.addEventListener("keyup", (event) => {
+          h1.textContent = `글자 수: ${event.currentTarget.value.length}`;
+        });
+        textarea.addEventListener("keyup", function () {
+          h1.textContent = `글자 수: ${this.value.length}`;
+        });
       });
     </script>
   </head>
   <body>
     <h1>글자 수: 0</h1>
     <textarea></textarea>
+
+    <div>
+      <h2>다 많이 사용됨 (암기하기)</h2>
+      <ul>
+        <li>1. 기본 방법</li>
+        <li>2. ⭐️event.currentTarget = 이벤트를 발생시킨 객체</li>
+        <li>3. 익명 함수 & this 키워드 사용</li>
+      </ul>
+    </div>
   </body>
 </html>
