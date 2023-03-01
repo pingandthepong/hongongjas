@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입력 양식</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const buttonA = document.querySelector("button");
+        const buttonB = document.querySelector("input[type=button]");
+
+        buttonA.addEventListener("click", (event) => {
+          event.currentTarget.textContent += "글자";
+        });
+        buttonB.addEventListener("click", (event) => {
+          event.currentTarget.value += "글자";
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div>
+      <h1>입력 양식</h1>
+      <ol>
+        <li>버튼</li>
+        <li>글자 입력</li>
+        <li>선택</li>
+        <li>체크박스</li>
+        <li>라디오버튼</li>
+      </ol>
+    </div>
+
+    <!-- click event 활용 -->
+    <button>버튼태그</button>
+    <input type="button" value="[type=button]" />
+
+    <!-- submit event 활용 -->
+    <form action=""><input type="submit" value="input [type=submit]" /></form>
+  </body>
+</html>
