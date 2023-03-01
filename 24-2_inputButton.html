@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>button 연습</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const buttonA = document.querySelector("button");
+        const buttonB = document.querySelector("input[type=button]");
+
+        // buttonA.addEventListener("click", (event) => {
+        //   event.currentTarget.textContent = "BUTTON A 🤩";
+
+        // });
+
+        // 버튼 클릭시 글자 바뀌고, 또 클릭하면 원래 글자 보이게 하기
+        buttonA.addEventListener("click", function (event) {
+          if (buttonA.textContent === "buttonA") {
+            event.currentTarget.textContent = "BUTTON A 🤩";
+          } else {
+            event.currentTarget.textContent = "buttonA";
+          }
+        });
+
+        buttonB.addEventListener("click", (event) => {
+          event.currentTarget.value = "BUTTON B 🤩";
+        });
+      });
+    </script>
+    <style>
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #e0e5ec;
+      }
+      .container {
+        width: 280px;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      button,
+      input[type="button"] {
+        width: 130px;
+        height: 40px;
+        border-radius: 5px;
+        font-family: "Lato", sans-serif;
+        font-weight: 500;
+        background: transparent;
+        transition: all 0.3s ease;
+        box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+          7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+          4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+        outline: none;
+        border: none;
+        position: relative;
+      }
+
+      button {
+        color: #000;
+      }
+
+      button::after {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 100%;
+        top: 0;
+        left: 0;
+        direction: rtl;
+        z-index: -1;
+        box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+          7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+        transition: all 0.3s ease;
+      }
+
+      button:hover::after {
+        left: auto;
+        right: 0;
+        width: 100%;
+      }
+
+      button:active,
+      input[type="button"]:active {
+        top: 2px;
+      }
+
+      input[type="button"] {
+        color: #fff;
+        background: rgb(255, 27, 0)
+          linear-gradient(
+            0deg,
+            rgba(255, 27, 0, 1) 0%,
+            rgba(251, 75, 2, 1) 100%
+          );
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button>buttonA</button>
+      <input type="button" value="buttonB" />
+    </div>
+  </body>
+</html>
