@@ -16,6 +16,17 @@
         buttonB.addEventListener("click", (event) => {
           event.currentTarget.value += "글자";
         });
+
+        const form = document.querySelector("form");
+        form.addEventListener("submit", (event) => {
+          const text = document.querySelector("input[type=text]");
+          if (text.value.indexOf("@") >= 0) {
+            alert("제출완료");
+          } else {
+            alert("다시");
+            event.preventDefault();
+          }
+        });
       });
     </script>
   </head>
@@ -36,6 +47,10 @@
     <input type="button" value="[type=button]" />
 
     <!-- submit event 활용 -->
-    <form action=""><input type="submit" value="input [type=submit]" /></form>
+    <form action="">
+      이메일 형식을 입력해주세요!<br />
+      <input type="text" name="test" id="" />
+      <input type="submit" value="input [type=submit]" />
+    </form>
   </body>
 </html>
