@@ -24,8 +24,12 @@
           }
         });
 
-        buttonB.addEventListener("click", (event) => {
-          event.currentTarget.value = "BUTTON B 🤩";
+        buttonB.addEventListener("click", function (event) {
+          if (buttonB.value === "buttonB") {
+            event.currentTarget.value = "BUTTON B 🤩";
+          } else {
+            event.currentTarget.value = "buttonB";
+          }
         });
       });
     </script>
