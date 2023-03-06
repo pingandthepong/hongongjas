@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>inch cm Trans</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const textarea = document.querySelector("textarea");
+        const button = document.querySelector("button");
+        const p = document.querySelector("p");
+
+        button.addEventListener("click", () => {
+          p.textContent = `${
+            Number(textarea.value) * 2.54
+          }cm로 변환되었습니다.`;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <button>계산</button>
+    <p></p>
+  </body>
+</html>
